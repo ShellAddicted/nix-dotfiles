@@ -47,8 +47,8 @@ run() {
     echo "Linking $here/common.nix to $dst/common.nix"
     $DRY_RUN_CMD ln -s "$here/common.nix" "$dst/common.nix"
 
-    echo "Linking $here/codexlab-ca.crt to $dst/codexlab-ca.crt"
-    $DRY_RUN_CMD ln -s "$here/codexlab-ca.crt" "$dst/codexlab-ca.crt"
+    #echo "Linking $here/codexlab-ca.crt to $dst/codexlab-ca.crt"
+    #$DRY_RUN_CMD ln -s "$here/codexlab-ca.crt" "$dst/codexlab-ca.crt"
 
     echo "Linking $here/$hostname/configuration.nix to $dst/configuration.nix"
     $DRY_RUN_CMD ln -s "$here/$hostname/configuration.nix" "$dst/configuration.nix"

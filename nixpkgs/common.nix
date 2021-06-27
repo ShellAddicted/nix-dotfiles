@@ -5,19 +5,13 @@ let
 in
 {
   imports = [
-    ./modules/alacritty.nix
     ./modules/coreutils.nix
     ./modules/desktop.nix
     ./modules/development.nix
-    ./modules/email
     ./modules/fish.nix
     (import ./modules/git.nix { homedir = homedir; })
     ./modules/gpg.nix
-    ./modules/greenclip.nix
-    ./modules/xmonad.nix
   ];
-
-  nixpkgs.overlays = [ (import ./overlays/discord.nix) ];
 
   home.username = username;
   home.homeDirectory = homedir;

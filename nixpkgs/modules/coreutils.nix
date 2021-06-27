@@ -18,7 +18,6 @@
     file
     patchelf
     inetutils
-    wireguard
   ];
 
   programs.direnv.enable = true;

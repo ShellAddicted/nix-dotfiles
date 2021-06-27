@@ -3,10 +3,10 @@
 {
   programs.git = {
     enable = true;
-    userName = "Matteo Joliveau";
-    userEmail = "matteojoliveau@gmail.com";
+    userName = "ShellAddicted";
+    userEmail = "shelladdicted@gmail.com";
     signing = {
-      key = "matteojoliveau@gmail.com";
+      key = "shelladdicted@gmail.com";
       signByDefault = true;
     };
     ignores = [ "*.iml" ".idea/" ".vscode" ];

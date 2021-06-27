@@ -14,19 +14,14 @@
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # Networking
-  networking.hostName = "frenchpenguin"; # Define your hostname
-  networking.interfaces.wlp59s0.useDHCP = true;
-
-  # Additional packages
-  environment.systemPackages = with pkgs; [
-    firehol
-  ];
+  networking.hostName = "cs01"; # Define your hostname
+  networking.interfaces.wlo1.useDHCP = true;
 
   # Enable Bluetooth
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-    settings = {
+    config = {
       General = {
         Enable = "Source,Sink,Media,Socket";
       };
@@ -39,9 +34,6 @@
   services.tlp.enable = true;
   powerManagement.powertop.enable = true;
 
-  # Enable Thunderbolt
-  services.hardware.bolt.enable = true;
-
   # Use the Intel drivers
   services.xserver.videoDrivers = [ "intel" ];
 
@@ -50,9 +42,7 @@
   # Enable touchpad support.
   services.xserver.libinput = {
     enable = true;
-    touchpad = {
-      naturalScrolling = true;
-      additionalOptions = ''MatchIsTouchpad "on"'';
-    };
+    naturalScrolling = true;
+    additionalOptions = ''MatchIsTouchpad "on"'';
   };
 }
