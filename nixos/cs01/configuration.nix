@@ -45,4 +45,7 @@
     naturalScrolling = true;
     additionalOptions = ''MatchIsTouchpad "on"'';
   };
+
+  boot.blacklistedKernelModules = lib.mkDefault [ "radeon" "amdgpu" ];
+  services.xserver.videoDrivers = lib.mkDefault [ "intel" ];
 }

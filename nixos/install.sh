@@ -53,8 +53,8 @@ run() {
     echo "Linking $here/$hostname/configuration.nix to $dst/configuration.nix"
     $DRY_RUN_CMD ln -s "$here/$hostname/configuration.nix" "$dst/configuration.nix"
 
-    echo "Linking $here/$hostname/hardware-configuration.nix to $dst/hardware-configuration.nix"
-    $DRY_RUN_CMD ln -s "$here/$hostname/hardware-configuration.nix" "$dst/hardware-configuration.nix"
+    #echo "Linking $here/$hostname/hardware-configuration.nix to $dst/hardware-configuration.nix"
+    #$DRY_RUN_CMD ln -s "$here/$hostname/hardware-configuration.nix" "$dst/hardware-configuration.nix"
 
     echo "Done"
     echo ""

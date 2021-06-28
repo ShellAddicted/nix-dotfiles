@@ -63,8 +63,8 @@ run() {
     echo "Linking $here/$hostname/configuration.nix to $dst/configuration.nix"
     $DRY_RUN_CMD cp "$here/$hostname/configuration.nix" "$dst/configuration.nix"
 
-    echo "Linking $here/$hostname/hardware-configuration.nix to $dst/hardware-configuration.nix"
-    $DRY_RUN_CMD cp "$here/$hostname/hardware-configuration.nix" "$dst/hardware-configuration.nix"
+    #echo "Linking $here/$hostname/hardware-configuration.nix to $dst/hardware-configuration.nix"
+    #$DRY_RUN_CMD cp "$here/$hostname/hardware-configuration.nix" "$dst/hardware-configuration.nix"
 
     echo "Patching paths in $dst/configuration.nix"
     $DRY_RUN_CMD sed "s@../common.nix@./common.nix@g" "$dst/configuration.nix" -i
