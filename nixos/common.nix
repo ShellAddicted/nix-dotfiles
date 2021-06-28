@@ -71,6 +71,8 @@
     plymouth
     virt-manager
     usbutils
+    mailcap
+    hwdata
   ];
 
   nixpkgs.config.allowUnfree = true;
